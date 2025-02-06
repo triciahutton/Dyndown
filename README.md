@@ -2,7 +2,7 @@
 UAF Masters Research, Dynamically Downscaling CMIP6 Models
 
 
-**extract_vars_pool_tricia.py **-- Post processing script used to extract variables from the wrf out files 
+**extract_vars_pool_tricia.py**-- Post processing script used to extract variables from the wrf out files 
 
 **run_extvar.sh** -- run the script extract_vars_pool_tricia.py with all necessary infputs, as well as logs to log_date_file.log of startdate, AND python log file
 **update_and_run.sh** -- reads in date from log_date_file.log, adds 150 days and overwrits run_extvar.sh to new start date to begin processing the next chunk of data 
