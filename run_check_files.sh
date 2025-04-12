@@ -1,6 +1,6 @@
 #!/bin/bash
 
-script_dir=/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/automation
+script_dir=/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-tpl
 
 #env
 source ~/miniconda3/bin/activate
