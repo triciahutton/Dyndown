@@ -7,7 +7,6 @@ import xarray as xr
 import datetime as dt
 from multiprocessing import Pool 
 
-#copy of script from Chris for support 
 # experimental - we should enable multicore support differently ultimately
 maxprocs = wrf.omp_get_num_procs()
 wrf.omp_set_num_threads(min(16, maxprocs))
@@ -15,7 +14,7 @@ wrf.omp_set_num_threads(min(16, maxprocs))
 LOGLEVEL = logging.DEBUG
 TESTFOLDER = 'out-s1978'
 WRFDATA = Path("/glade/campaign/uwyo/wyom0200/alaska/miroc6/ssp370") / TESTFOLDER
-OUTDATA = Path().resolve() / "testout_daily"  # output directory right under current directory
+OUTDATA = Path().resolve() / "post_proc_out"  # output directory right under current directory
 # create output directory if it doesn't exist
 Path(OUTDATA).mkdir(parents=True, exist_ok=True) 
 SUBSETS = {
@@ -207,7 +206,6 @@ def process_day(testset, startdate, ii, args, COMPRESSIONLEVEL, SUBSETS, retriev
     process_and_save_files(testset, startdate, ii, args, COMPRESSIONLEVEL, SUBSETS, retrieve_vars, postprocess_acc_all)
 
 
-
 if __name__ == '__main__':
     args = get_args()
     loglevel = LOGLEVEL
@@ -228,6 +226,3 @@ if __name__ == '__main__':
     end_script = dt.datetime.now()
     logging.info(f"Script ended at: {end_script}")
     logging.info(f"Total duration: {end_script - begin_script}")
-
-
-
