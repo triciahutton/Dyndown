@@ -1,15 +1,18 @@
 #!/bin/bash
 
 #create a log file
-exec > /glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/automation/log_moving_files.log 2>&1
+exec > /glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-tpl/log_moving_files.log 2>&1
 
-SOURCE_DIR="/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/automation/testout_daily"
-DEST_DIR_12KM="/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/automation/testout_daily/12km"
-DEST_DIR_4KM="/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/automation/testout_daily/4km"
-DEST_DIR_1_33KM="/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/automation/testout_daily/1_33km"
+SOURCE_DIR="/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-tpl/post_proc_out"
+DEST_DIR_12KM="/glade/campaign/uwyo/wyom0200/alaska/miroc6/ssp370/post_proc-s1978/12km"
+#"/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-tpl/post_proc_out/12km"
+DEST_DIR_4KM="/glade/campaign/uwyo/wyom0200/alaska/miroc6/ssp370/post_proc-s1978/4km"
+#"/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-tpl/post_proc_out/4km"
+DEST_DIR_1_33KM="/glade/campaign/uwyo/wyom0200/alaska/miroc6/ssp370/post_proc-s1978/1_33km"
+#"/glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-tpl/post_proc_out/1_33km"
 
 
-mkdir -p "$DEST_DIR_12KM" "$DEST_DIR_4KM" "$DEST_DIR_1_33KM"
+#mkdir -p "$DEST_DIR_12KM" "$DEST_DIR_4KM" "$DEST_DIR_1_33KM"
 
 for file in "$SOURCE_DIR"/*; do
     # Check if it's a regular file
