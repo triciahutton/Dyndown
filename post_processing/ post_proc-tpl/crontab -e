@@ -1,0 +1,5 @@
+#this is the line youd type after signing in with crontab (ssh -Y phutton@cron.hpc.ucar.edu) 
+#then doing crontab -e 
+
+0 */12 * * * /glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-s2083/update_and_run.sh >> /glade/derecho/scratch/phutton/CMIP6/miroc6/ssp370/post_proc-s2083/cronlog.txt 2>&1
+#this runs ever 12 hours, and exports the info into the crontab.txt file
